@@ -59,6 +59,7 @@ h1::before {
   gap: 1.25rem;
   justify-content: center;
 }
+
 .links a {
   background-color: #fff;
   padding: 1rem 2rem;
@@ -70,6 +71,12 @@ h1::before {
 
 .links a:hover {
   outline: 2px solid #e21;
+}
+
+.cover img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
 }
 
 .conteudo {
@@ -157,4 +164,57 @@ h1::before {
   padding: 40px;
   box-sizing: border-box;
   font-size: 1.25rem;
+}
+
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .header {
+    gap: 30px;
+  }
+
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .subtitulo {
+    font-size: 3rem;
+  }
+
+  h1::before {
+    display: none;
+  }
+
+  .links a {
+    width: 6rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
